@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ver Tarea</title>
+    <a href="{% url 'ver_tarea' tarea.id %}">Ver Tarea</a>
+
+</head>
+<body>
+    <h1>Detalles de la Tarea</h1>
+    <p><strong>Título:</strong> {{ tarea.titulo }}</p>
+    <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
+    <p><strong>Asignada a:</strong> {{ tarea.asignada_a }}</p>
+    <p><strong>Prioridad:</strong> {{ tarea.prioridad }}</p>
+    <!-- Agrega estilos y otros detalles visuales según tus necesidades -->
+</body>
+</html>

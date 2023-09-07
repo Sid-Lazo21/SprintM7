@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Tareas</title>
+</head>
+<body>
+    <h1>Listado de Tareas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Asignada a</th>
+                <th>Prioridad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tarea in tareas %}
+                <tr>
+                    <td>{{ tarea.titulo }}</td>
+                    <td>{{ tarea.asignada_a }}</td>
+                    <td>{{ tarea.prioridad }}</td>
+                    <td>
+                        <a href="{% url 'ver_tarea' tarea.id %}">Ver</a>
+                        <a href="{% url 'editar_tarea' tarea.id %}">Editar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

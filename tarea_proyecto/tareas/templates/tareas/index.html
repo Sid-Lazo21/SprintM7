@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Inicio de mi proyecto</title>
+</head>
+<body>
+    <h1>Bienvenido a la Página de Inicio</h1>
+    <ul>
+        <li><a href="{% url 'crear_tarea' %}">Crear Tarea</a></li>
+        <li><a href="{% url 'listar_tareas' %}">Listar Tareas</a></li>
+        <li><a href="{% url 'ver_tarea' pk=1 %}">Ver Tarea</a></li>
+
+    </ul>
+</body>
+</html>
